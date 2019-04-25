@@ -128,7 +128,6 @@ Page({
             }
             that.reset();
         }
-        
     },
     //选择区域
     areaChange:(e)=>{
@@ -142,7 +141,6 @@ Page({
 		}else{
 			pingtaiArray = that.data.otherPingtaiArray;
 		}
-		
         that.setData({
             selectedAreaId:selectedAreaId,
             selectedArea: selectedArea,
@@ -254,14 +252,12 @@ Page({
         let productRate = that.data.productRate;//产品费率
         let selectedAreaId = that.data.selectedAreaId;//已选区域
         
-
         productRate = parseFloat(productRate);
         interes = parseFloat(interes);
        
         if (productRate==0||isNaN(productRate)||interes==0||isNaN(interes)) {
             return serviceCharges;
         }
-        
         //（产品费率-底息）/（100%+底息）×走款金额 向上百位取整+加融现金盗抢+2%盗抢金额+200
         let _rate = parseFloat((productRate-interes)/(100+interes));
         let extra = 0;
@@ -277,7 +273,6 @@ Page({
         serviceCharges = _rate*amountPaid+theftAcount+extra;
         return that.hundredCeil(parseInt(serviceCharges));
     },
-   
     caluInteres:()=>{//获取底息 
         let selectedPingtai = that.data.selectedPingtai;
         let selectedDate = that.data.selectedDate;
@@ -290,7 +285,6 @@ Page({
         });
         return interes;
     },
-   
     //百位取整
     hundredCeil:(inp)=>{
         let input = parseFloat(inp);
@@ -302,7 +296,6 @@ Page({
         }else{
             return inp ;
         }
-
     },
     getRateArray:()=>{
         let selectedAreaId = that.data.selectedAreaId;
@@ -320,7 +313,6 @@ Page({
             if (selectedAreaId==='2') {
                 area = that.data.zonghui;
             }
-
             area.forEach(function(v,k){
                 if(v.name==selectedGroup&&v.date==selectedDate){
                     rateArray = v.list;           
@@ -328,7 +320,6 @@ Page({
            
             });
         }
-
         that.setData({
             rateArray :rateArray,
             productRate:''
@@ -500,5 +491,4 @@ Page({
            
         });
     }
-
 })

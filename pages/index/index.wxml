@@ -9,7 +9,6 @@
                     <input class="weui-input" type="number" maxlength="10" bindinput="oninput" data-tag='chejia' value="{{chejia}}" placeholder="请输入车辆价格"/>
                 </view>
             </view>
-
             <view class="weui-cell">
                 <view class="weui-cell__hd">
                     <view class="weui-label">走款金额</view>
@@ -18,7 +17,6 @@
                     <input class="weui-input" type="number" maxlength="10" bindinput="oninput" data-tag='amountPaid' value="{{amountPaid}}"  placeholder="请输入走款金额"/>
                 </view>
             </view>
-
             <view class="weui-cell">
                 <view class="weui-cell__hd">
                     <view class="weui-label">贷款成数</view></view>
@@ -26,7 +24,6 @@
                     <input class="weui-input"  maxlength="20" value="{{paidPercent}}" disabled="true" />
                 </view>
             </view>
-
             <view class="weui-cell weui-cell_access">
                 <view class="weui-cell__bd">
                     <text>区域</text>
@@ -37,7 +34,6 @@
                     </picker>
                 </view>
             </view>
-
              <view class="weui-cell weui-cell_access">
                 <view class="weui-cell__bd">
                     <text>产品组</text>
@@ -48,16 +44,13 @@
                     </picker>
                 </view>
             </view>
-
             <view class="weui-cell weui-cell_access">
                 <view class="weui-cell__bd">
                     <text>贷款期数</text>
                 </view>
                 <view class="weui-cell__ft_in-access">
                     <picker bindchange="dateChange" value="{{index}}" range="{{dateType}}" data-id="{{index}}">
-                           
                             {{selectedDate!=''?selectedDate+'期':'请选择贷款期数'}}
-                           
                     </picker>
                 </view>
             </view>
