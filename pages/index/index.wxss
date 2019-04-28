@@ -1,29 +1,33 @@
-.weui-input{text-align: right}
-.gzbtn{margin: 1em;}
+.weui-input {
+    text-align: right
+}
+
+.gzbtn {
+    margin: 1em;
+}
+
 .button_box button {
-  flex: 1;
-  margin: 0 5px;
-  color: #fff;
-  font-size: 32rpx;
+    flex: 1;
+    margin: 0 5px;
+    color: #fff;
+    font-size: 32rpx;
 }
 
 .button_box {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  padding: 6px 5px;
-  box-sizing: border-box;
-  background: #f9f9f9;
-  border-top: 1px soid #f1eded;
-  z-index: 999;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 6px 5px;
+    box-sizing: border-box;
+    background: #f9f9f9;
+    border-top: 1px soid #f1eded;
+    z-index: 999;
 }
+
 .weui-cells {
     margin-bottom: 65px;
 }
-
-
-
