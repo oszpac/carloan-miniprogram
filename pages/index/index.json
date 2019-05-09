@@ -1,5 +1,5 @@
 {
-    "navigationBarTitleText": "车贷计算器",
-    "disableScroll": false,
-    "enablePullDownRefresh": false
+  "navigationBarTitleText":"车贷计算器",
+  "disableScroll":false,
+  "enablePullDownRefresh":false
 }
