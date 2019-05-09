@@ -1,76 +1,70 @@
 <view class="container">
     <view class="main">
         <view class="weui-cells">
-             <view class="weui-cell">
+            <view class="weui-cell">
                 <view class="weui-cell__hd">
                     <view class="weui-label">车价</view>
                 </view>
                 <view class="weui-cell__bd">
-                    <input class="weui-input" type="number" maxlength="10" bindinput="oninput" data-tag='chejia' value="{{chejia}}" placeholder="请输入车辆价格"/>
+                    <input class="weui-input" type="number" maxlength="10" bindinput="oninput" data-tag='chejia' value="{{chejia}}" placeholder="请输入车辆价格" />
                 </view>
             </view>
-
             <view class="weui-cell">
                 <view class="weui-cell__hd">
                     <view class="weui-label">走款金额</view>
                 </view>
                 <view class="weui-cell__bd">
-                    <input class="weui-input" type="number" maxlength="10" bindinput="oninput" data-tag='amountPaid' value="{{amountPaid}}"  placeholder="请输入走款金额"/>
+                    <input class="weui-input" type="number" maxlength="10" bindinput="oninput" data-tag='amountPaid' value="{{amountPaid}}" placeholder="请输入走款金额" />
                 </view>
             </view>
-
             <view class="weui-cell">
                 <view class="weui-cell__hd">
-                    <view class="weui-label">贷款成数</view></view>
+                    <view class="weui-label">贷款成数</view>
+                </view>
                 <view class="weui-cell__bd">
-                    <input class="weui-input"  maxlength="20" value="{{paidPercent}}" disabled="true" />
+                    <input class="weui-input" maxlength="20" value="{{paidPercent}}" disabled="true" />
                 </view>
             </view>
-
             <view class="weui-cell weui-cell_access">
                 <view class="weui-cell__bd">
                     <text>区域</text>
                 </view>
-                <view  class="weui-cell__ft_in-access">
-                    <picker bindchange="areaChange"   value="{{index}}" range="{{areas}}"  data-id="{{index}}">
-                            {{selectedArea||'请选择区域'}}
+                <view class="weui-cell__ft_in-access">
+                    <picker bindchange="areaChange" value="{{index}}" range="{{areas}}" data-id="{{index}}">
+                        {{selectedArea||'请选择区域'}}
                     </picker>
                 </view>
             </view>
- <view class="weui-cell weui-cell_access">
+            <view class="weui-cell weui-cell_access">
                 <view class="weui-cell__bd">
                     <text>车辆类型</text>
                 </view>
                 <view class="weui-cell__ft_in-access">
                     <picker bindchange="pingtaiChange" value="{{index}}" range="{{pingtaiArray}}">
-                            {{selectedPingtai|| '请选择车辆类型'}}
+                        {{selectedPingtai|| '请选择车辆类型'}}
                     </picker>
                 </view>
             </view>
-             <view class="weui-cell weui-cell_access">
+            <view class="weui-cell weui-cell_access">
                 <view class="weui-cell__bd">
                     <text>产品组</text>
                 </view>
                 <view class="weui-cell__ft_in-access">
                     <picker bindchange="proGroupChange" value="{{index}}" range="{{proGroup}}">
-                            {{selectedGroup||'请选择产品组'}}
+                        {{selectedGroup||'请选择产品组'}}
                     </picker>
                 </view>
             </view>
-
             <view class="weui-cell weui-cell_access">
                 <view class="weui-cell__bd">
                     <text>贷款期数</text>
                 </view>
                 <view class="weui-cell__ft_in-access">
                     <picker bindchange="dateChange" value="{{index}}" range="{{dateType}}" data-id="{{index}}">
-                           
-                            {{selectedDate!=''?selectedDate+'期':'请选择贷款期数'}}
-                           
+                        {{selectedDate!=''?selectedDate+'期':'请选择贷款期数'}}
                     </picker>
                 </view>
             </view>
-
             <view class="weui-cell weui-cell_access">
                 <view class="weui-cell__bd">
                     <text>盗抢险方案</text>
@@ -80,7 +74,6 @@
                     </picker>
                 </view>
             </view>
-			
             <view class="weui-cell weui-cell_access" wx:if="{{selectedTheftSchemeId==='0'||selectedTheftSchemeId==='1'}}">
                 <view class="weui-cell__bd">
                     <text>盗抢险金额</text>
@@ -90,81 +83,76 @@
                     </picker>
                 </view>
             </view>
-			<view class="weui-cell" wx:if="{{selectedTheftSchemeId==2}}">
-                <view class="weui-cell__hd"><view class="weui-label">盗抢险金额</view></view>
+            <view class="weui-cell" wx:if="{{selectedTheftSchemeId==2}}">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">盗抢险金额</view>
+                </view>
                 <view class="weui-cell__bd">
-                    <input class="weui-input"  maxlength="20" value="{{theftAcount}}" disabled="true" />
+                    <input class="weui-input" maxlength="20" value="{{theftAcount}}" disabled="true" />
                 </view>
             </view>
-			
-            
-             
             <view class="weui-cell weui-cell_access">
                 <view class="weui-cell__bd">
                     <text>产品费率</text>
                 </view>
                 <view class="weui-cell__ft_in-access">
                     <picker bindchange="productRateChange" value="{{index}}" range="{{rateArray}}">
-                            {{productRate || '请选择产品费率'}}
+                        {{productRate || '请选择产品费率'}}
                     </picker>
                 </view>
             </view>
-
-           
-
             <view class="weui-cell">
-                <view class="weui-cell__hd"><view class="weui-label">综合服务费（担保费、盗抢险）</view></view>
+                <view class="weui-cell__hd">
+                    <view class="weui-label">综合服务费（担保费、盗抢险）</view>
+                </view>
                 <view class="weui-cell__bd">
-                    <input class="weui-input"  maxlength="20"
-                    value="{{serviceCharges}}" disabled="true" />
+                    <input class="weui-input" maxlength="20" value="{{serviceCharges}}" disabled="true" />
                 </view>
             </view>
             <view class="weui-cell">
-                <view class="weui-cell__hd"><view class="weui-label">送审金额（最终贷款金额）</view></view>
+                <view class="weui-cell__hd">
+                    <view class="weui-label">送审金额（最终贷款金额）</view>
+                </view>
                 <view class="weui-cell__bd">
-                     <input class="weui-input"  maxlength="20"
-                    value="{{approvalMoney}}" disabled="true" />
+                    <input class="weui-input" maxlength="20" value="{{approvalMoney}}" disabled="true" />
                 </view>
             </view>
-
             <view class="weui-cell">
-                <view class="weui-cell__hd"><view class="weui-label">送审成数</view></view>
+                <view class="weui-cell__hd">
+                    <view class="weui-label">送审成数</view>
+                </view>
                 <view class="weui-cell__bd">
-                     <input class="weui-input"  maxlength="20"
-                    value="{{approvalPercent}}" disabled="true" />
+                    <input class="weui-input" maxlength="20" value="{{approvalPercent}}" disabled="true" />
                 </view>
             </view>
-
             <view class="weui-cell">
-                <view class="weui-cell__hd"><view class="weui-label">还款总额</view></view>
+                <view class="weui-cell__hd">
+                    <view class="weui-label">还款总额</view>
+                </view>
                 <view class="weui-cell__bd">
-                    <input class="weui-input"  maxlength="20"
-                    value="{{totalRepayment}}" disabled="true" />
+                    <input class="weui-input" maxlength="20" value="{{totalRepayment}}" disabled="true" />
                 </view>
             </view>
-
             <view class="weui-cell">
-                <view class="weui-cell__hd"><view class="weui-label">月供</view></view>
+                <view class="weui-cell__hd">
+                    <view class="weui-label">月供</view>
+                </view>
                 <view class="weui-cell__bd">
-                    <input class="weui-input"  maxlength="20"
-                    value="{{monthlyPayment}}" disabled="true" />
+                    <input class="weui-input" maxlength="20" value="{{monthlyPayment}}" disabled="true" />
                 </view>
             </view>
-
             <view class="weui-cell" wx:if="{{approvalContractPrice>0}}">
-                <view class="weui-cell__hd"><view class="weui-label">送审合同价</view></view>
+                <view class="weui-cell__hd">
+                    <view class="weui-label">送审合同价</view>
+                </view>
                 <view class="weui-cell__bd">
-                     <input class="weui-input"  maxlength="20"
-                    value="{{approvalContractPrice}}" disabled="true" />
+                    <input class="weui-input" maxlength="20" value="{{approvalContractPrice}}" disabled="true" />
                 </view>
             </view>
         </view>
-
         <view class="button_box">
-        <button class="bc_blue white gzbtn" bindtap="onClear">清空</button>
-        <button class="bc_blue white gzbtn" bindtap="onCalu">计算</button>
-            
-
+            <button class="bc_blue white gzbtn" bindtap="onClear">清空</button>
+            <button class="bc_blue white gzbtn" bindtap="onCalu">计算</button>
         </view>
     </view>
 </view>

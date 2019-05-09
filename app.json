@@ -1,14 +1,14 @@
 {
-    "pages": [
-        "pages/index/index"
-    ],
-    "window":
-    {
-        "backgroundTextStyle": "light",
-        "navigationBarTextStyle": "white",
-        "navigationBarTitleText": "",
-        "navigationBarBackgroundColor": "#00C2C2",
-        "backgroundColor": "#F2f2f2",
-        "enablePullDownRefresh": true
-    }
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "",
+    "navigationBarBackgroundColor": "#00C2C2",
+    "backgroundColor": "#F2f2f2",
+    "enablePullDownRefresh": true
+  },
+  "sitemapLocation": "sitemap.json"
 }
